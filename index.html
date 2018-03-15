@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Diagramme</title>
+	<script type="text/javascript" src="my.js"></script>
+	<link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body onload="addStartTask()">
+	<div class="global">
+		<div class="global-left">
+			<h3>Ajouter une tâche</h3>
+			<form name="pert">
+				<label>Nom de la tâche</label>
+				<input type="text" name="taskName">
+				<label>Durée en jour(s)</label>
+				<input type="number" name="taskDuration">
+				<label>Prédécesseur(s)</label>
+				<select id="selectTaskPredecessor" multiple="multiple" size='8'>
+				</select>
+				<input type="button" value="Ajouter" onclick="ajouterTache()">
+			</form>
+		</div>
+		<div class="global-right">
+			<h3>Tableau des tâches</h3>
+			<p id="duree"></p>
+			<p id="cheminCritique"></p>
+			<table id="tableauPert">
+				<thead>
+					<tr>
+						<th>Tâche</th>
+						<th>Durée (j)</th>
+						<th>Prédécesseur(s)</th>
+						<th>DTO</th>
+						<th>FTO</th>
+						<th>DTA</th>
+						<th>FTA</th>
+						<th>MT</th>
+						<th>ML</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>		
+	</div>
+</body>
+</html>
